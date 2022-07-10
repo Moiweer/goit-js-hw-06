@@ -1,3 +1,6 @@
+const ul = document.querySelector("ul");
+const galleryList = document.querySelector(".gallery");
+
 const images = [
   {
     url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
@@ -12,3 +15,23 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const galleryItem = ({url, alt}) => `<li><img src="${url}" alt="${alt}"></li>`
+
+const galleryAllImg = images.reduce((acc, item) => acc + galleryItem(item), "");
+
+
+ul.insertAdjacentHTML("afterend", galleryAllImg);
+
+
+
+const imgItem = ul.classList.add("img-item");
+const li = ul.querySelector("li");
+const liList = li.classList.add("list-style");
+const img = li.querySelector("img");
+const imgList = img.classList.add("img-style");
+img.style.display = "block";
+img.style.borderRadius = "50%";
+li.style.listStyleType = "none";
+
+ul.style.listStyleType = "none";
