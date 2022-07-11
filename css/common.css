@@ -22,3 +22,13 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+
+.list-style {
+  list-style-type: none;
+  
+ 
+}
+.img-style {
+  width: 600px;
+  border-radius: 60%;
+}

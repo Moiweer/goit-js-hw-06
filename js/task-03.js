@@ -25,13 +25,12 @@ ul.insertAdjacentHTML("afterend", galleryAllImg);
 
 
 
-const imgItem = ul.classList.add("img-item");
-const li = ul.querySelector("li");
-const liList = li.classList.add("list-style");
-const img = li.querySelector("img");
-const imgList = img.classList.add("img-style");
-img.style.display = "block";
-img.style.borderRadius = "50%";
-li.style.listStyleType = "none";
+const li = document.querySelector("li");
+li.classList.add("list-style");
 
-ul.style.listStyleType = "none";
+const imgStyle = document.querySelector("img");
+imgStyle.classList.add("img-style")
+
+
+
+
