@@ -1,11 +1,16 @@
-const inputText = document.querySelector("text");
-const dataLenght = document.querySelector("[data-lenght=6]")
-const valid = document.querySelector("#validation-input.valid");
-const invalid = document.querySelector("#validation-input.invalid");
+const input = document.querySelector("input")
+const dataLength = parseInt(input.getAttribute("data-length"));
 
-inputText.addEventListener("input", (event) => {
-    inputText.value = dataLenght.value 
-    valid.focus() || 
-        inputText.value !== dataLenght.value
-        invalid.focus()
+
+input.addEventListener("blur", (event) => {
+   
+  if (event.currentTarget.value.length === dataLength) {
+    event.currentTarget.classList.add('valid')
+        event.currentTarget.classList.remove("invalid")
+    }
+    else {
+        event.currentTarget.classList.add("invalid")
+        event.currentTarget.classList.remove("valid")
+   }
 });
+
